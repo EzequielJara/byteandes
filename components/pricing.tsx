@@ -53,7 +53,7 @@ export default function Pricing() {
             patternUnits="userSpaceOnUse"
             patternContentUnits="userSpaceOnUse"
           >
-            <circle id="pattern-circle" cx="10" cy="10" r="1.6257413380501518" fill="#fff"></circle>
+            <circle id="pattern-circle" cx="10" cy="10" r="1.6257413380501518" fill="hsl(var(--primary-foreground))"></circle>
           </pattern>
           <rect id="rect" x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)"></rect>
         </svg>

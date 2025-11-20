@@ -22,15 +22,15 @@ export default function HowItWorks() {
       number: "01",
       title: "Sign Up",
       description: "Create your account in seconds. No credit card required for the free trial.",
-      color: "from-purple-500 to-purple-700",
+      color: "from-[#4f46e5] to-[#7f38e8]",
       image: "/images/dashboard.png",
-      icon: "/icons/signup.svg", // Add appropriate icons
+      icon: "/icons/signup.svg",
     },
     {
       number: "02",
       title: "Configure",
       description: "Set up your workspace and invite your team members to collaborate.",
-      color: "from-pink-500 to-purple-500",
+      color: "from-[#7f38e8] to-[#4f46e5]",
       image: "/images/team.png",
       icon: "/icons/configure.svg",
     },
@@ -38,7 +38,7 @@ export default function HowItWorks() {
       number: "03",
       title: "Import Data",
       description: "Easily import your existing data or start fresh with our templates.",
-      color: "from-blue-500 to-purple-500",
+      color: "from-[#4f46e5] to-[#7f38e8]",
       image: "/images/webinar.png",
       icon: "/icons/import.svg",
     },
@@ -46,20 +46,20 @@ export default function HowItWorks() {
       number: "04",
       title: "Start Working",
       description: "Begin using the platform to streamline your workflow and boost productivity.",
-      color: "from-purple-500 to-pink-500",
+      color: "from-[#7f38e8] to-[#4f46e5]",
       image: "/images/automation.png",
       icon: "/icons/launch.svg",
     },
   ]
 
   return (
-    <section id="how-it-works" className="relative py-24 overflow-hidden bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950" ref={sectionRef}>
+    <section id="how-it-works" className="relative py-24 overflow-hidden bg-gradient-to-b from-[#1f2937] via-[#374151] to-[#1f2937]" ref={sectionRef}>
       {/* Background elements - floating gradient particles */}
       <div className="absolute inset-0 pointer-events-none">
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute rounded-full bg-gradient-to-br from-purple-600/20 to-pink-600/20 blur-xl"
+            className="absolute rounded-full bg-gradient-to-br from-[#4f46e5]/20 to-[#7f38e8]/20 blur-xl"
             style={{
               width: Math.random() * 100 + 50,
               height: Math.random() * 100 + 50,
@@ -96,20 +96,20 @@ export default function HowItWorks() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <span className="inline-block px-4 py-1.5 text-xs font-medium text-purple-300 bg-purple-950/50 rounded-full backdrop-blur-sm mb-4">
+            <span className="inline-block px-4 py-1.5 text-xs font-medium text-[#4f46e5] bg-[#4f46e5]/10 rounded-full backdrop-blur-sm mb-4">
               Effortless Integration
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-              How SaasPro <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Transforms</span> Your Workflow
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-[#1f2937]">
+              How SaasPro <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4f46e5] to-[#7f38e8]">Transforms</span> Your Workflow
             </h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            <p className="text-[#6b7280] text-lg max-w-2xl mx-auto">
               A seamless four-step process that revolutionizes the way your team works
             </p>
             
             {/* Animated underline */}
             <div className="relative w-40 h-1 mx-auto mt-6">
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"
+                className="absolute inset-0 bg-gradient-to-r from-[#4f46e5] to-[#7f38e8] rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: '100%' }}
                 transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
@@ -121,7 +121,7 @@ export default function HowItWorks() {
         {/* Interactive Timeline */}
         <div className="relative max-w-6xl mx-auto">
           {/* Main vertical line for desktop */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-600/70 via-pink-600/70 to-purple-600/70 rounded-full transform -translate-x-1/2" />
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#4f46e5]/70 via-[#7f38e8]/70 to-[#4f46e5]/70 rounded-full transform -translate-x-1/2" />
           
           {/* Steps container */}
           <div className="space-y-20 md:space-y-32">
@@ -136,51 +136,51 @@ export default function HowItWorks() {
                 animate={mainControls}
                 className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-6 md:gap-12`}
               >
-                {/* Step number without hover animation */}
+                {/* Step number */}
                 <div className="relative shrink-0 z-10">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-gray-900 rounded-full border-2 border-purple-500 flex items-center justify-center shadow-lg shadow-purple-900/20">
-                    <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-[#f2efe5] rounded-full border-2 border-[#4f46e5] flex items-center justify-center shadow-lg shadow-[#4f46e5]/20">
+                    <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#4f46e5] to-[#7f38e8] bg-clip-text text-transparent">
                       {step.number}
                     </span>
                   </div>
                   {/* Pulsing circle animation */}
                   <div className="absolute -inset-3 z-0">
-                    <div className="absolute inset-0 rounded-full bg-purple-500/20 animate-ping opacity-50" />
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-sm" />
+                    <div className="absolute inset-0 rounded-full bg-[#4f46e5]/20 animate-ping opacity-50" />
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#4f46e5]/20 to-[#7f38e8]/20 blur-sm" />
                   </div>
                 </div>
 
-                {/* Content card without hover animation */}
+                {/* Content card */}
                 <div className="flex-1">
-                  <div className="relative bg-gray-900/90 backdrop-blur-md rounded-xl overflow-hidden md:max-w-[90%]">
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-800/20 via-transparent to-pink-800/20 opacity-50" />
-                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-600 to-pink-600" />
+                  <div className="relative bg-[#f2efe5] backdrop-blur-md rounded-xl overflow-hidden md:max-w-[90%] border border-[#e5e7eb]">
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#4f46e5]/10 via-transparent to-[#7f38e8]/10 opacity-50" />
+                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#4f46e5] to-[#7f38e8]" />
                     
                     <div className="p-6 md:p-8 relative">
                       <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-start">
                         <div className="flex-1">
-                          <h3 className="text-2xl font-bold mb-3">{step.title}</h3>
-                          <p className="text-gray-300">{step.description}</p>
+                          <h3 className="text-2xl font-bold mb-3 text-[#1f2937]">{step.title}</h3>
+                          <p className="text-[#6b7280]">{step.description}</p>
                           
                           <ul className="mt-5 space-y-2">
                             {[1, 2, 3].map((item) => (
                               <li key={item} className="flex items-start gap-2">
-                                <CheckCircle className="h-5 w-5 text-purple-400 mt-0.5 shrink-0" />
-                                <span className="text-sm text-gray-300">Key feature #{item} for this step</span>
+                                <CheckCircle className="h-5 w-5 text-[#4f46e5] mt-0.5 shrink-0" />
+                                <span className="text-sm text-[#6b7280]">Key feature #{item} for this step</span>
                               </li>
                             ))}
                           </ul>
 
                           <div className="mt-6">
-                            <a href="#" className="inline-flex items-center text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors">
+                            <a href="#" className="inline-flex items-center text-sm font-medium text-[#4f46e5] hover:text-[#20418d] transition-colors">
                               Learn more about this step <ChevronRight className="ml-1 h-4 w-4" />
                             </a>
                           </div>
                         </div>
                         
-                        {/* Image without hover animation */}
-                        <div className="relative shrink-0 md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden">
-                          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-pink-600/10 z-10" />
+                        {/* Image */}
+                        <div className="relative shrink-0 md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden border border-[#e5e7eb]">
+                          <div className="absolute inset-0 bg-gradient-to-br from-[#4f46e5]/10 to-[#7f38e8]/10 z-10" />
                           <Image
                             src={step.image || "/placeholder.svg"}
                             alt={step.title}
@@ -197,7 +197,7 @@ export default function HowItWorks() {
           </div>
         </div>
         
-        {/* CTA without hover animation */}
+        {/* CTA */}
         <motion.div 
           className="mt-20 text-center"
           initial={{ opacity: 0, y: 30 }}
@@ -205,16 +205,16 @@ export default function HowItWorks() {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <div className="relative inline-block">
-            <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur-md opacity-70" />
+            <div className="absolute -inset-1 bg-gradient-to-r from-[#4f46e5] to-[#7f38e8] rounded-lg blur-md opacity-70" />
             <a 
               href="#" 
-              className="relative inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600/90 to-pink-600/90 text-white font-medium text-lg hover:from-purple-500 hover:to-pink-500 transition-all shadow-lg shadow-purple-900/30"
+              className="relative inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-gradient-to-r from-[#4f46e5] to-[#7f38e8] text-white font-medium text-lg hover:from-[#20418d] hover:to-[#4f46e5] transition-all shadow-lg shadow-[#4f46e5]/30"
             >
               Transform Your Workflow <ArrowRight className="h-5 w-5" />
             </a>
           </div>
           
-          <p className="mt-4 text-gray-400">
+          <p className="mt-4 text-[#6b7280]">
             Join thousands of teams already using SaasPro
           </p>
         </motion.div>

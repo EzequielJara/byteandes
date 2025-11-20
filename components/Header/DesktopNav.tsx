@@ -89,7 +89,7 @@ export default function DesktopNav({
             width: "18px",
             height: "13px",
             transition: 'left 300ms cubic-bezier(0.4,0,0.2,1), top 300ms cubic-bezier(0.4,0,0.2,1)',
-            background: "#a21caf",
+            background: "hsl(var(--primary))",
             clipPath: "polygon(50% 0%, 0 100%, 100% 100%)", // flipped triangle
           }}
         />
@@ -138,7 +138,7 @@ export default function DesktopNav({
           style={{
             top: "calc(100% + 12px)", // menu starts right after the arrow (arrow height)
             zIndex: 50,
-            background: "rgba(17, 15, 31, 0.95)",
+            background: "hsl(var(--card))",
             backdropFilter: "blur(8px)",
             display: "flex",
             justifyContent: "center",
@@ -158,7 +158,7 @@ export default function DesktopNav({
               left: 0,
               width: "100%",
               height: "4px",
-              background: "linear-gradient(90deg, #a21caf 0%, #ec4899 100%)",
+              background: "hsl(var(--primary))",
               borderRadius: "4px 4px 0 0",
               zIndex: 1,
             }}

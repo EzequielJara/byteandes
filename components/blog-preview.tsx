@@ -33,17 +33,16 @@ export default function BlogPreview() {
 
   return (
     <section className="relative py-20 md:py-32 overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#1f2937] via-[#374151] to-[#1f2937]"></div>
 
       <div className="container relative px-4 md:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
-            <p className="text-purple-400 font-medium mb-2">Latest Articles</p>
-            <h2 className="text-3xl md:text-4xl font-bold">From Our Blog</h2>
+            <p className="text-[#4f46e5] font-medium mb-2">Latest Articles</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1f2937]">From Our Blog</h2>
           </div>
           <div className="mt-4 md:mt-0">
-            <Button variant="link" className="text-purple-400 hover:text-purple-300 p-0 h-auto flex items-center gap-1">
+            <Button variant="link" className="text-[#4f46e5] hover:text-[#20418d] p-0 h-auto flex items-center gap-1">
               View all articles <ArrowRight className="h-4 w-4 ml-1" />
             </Button>
           </div>
@@ -52,7 +51,7 @@ export default function BlogPreview() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {articles.map((article, index) => (
             <Link href="#" key={index} className="group">
-              <div className="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/5">
+              <div className="bg-[#f2efe5] border border-[#e5e7eb] rounded-xl overflow-hidden transition-all duration-300 hover:border-[#4f46e5]/30 hover:shadow-lg hover:shadow-[#4f46e5]/5">
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={article.image || "/placeholder.svg"}
@@ -60,21 +59,21 @@ export default function BlogPreview() {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-                  <div className="absolute top-4 left-4 bg-purple-600/90 text-white text-xs font-medium px-2 py-1 rounded">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#f2efe5] to-transparent opacity-60"></div>
+                  <div className="absolute top-4 left-4 bg-[#4f46e5]/90 text-white text-xs font-medium px-2 py-1 rounded">
                     {article.category}
                   </div>
                 </div>
                 <div className="p-6">
-                  <div className="flex items-center text-sm text-gray-400 mb-3">
+                  <div className="flex items-center text-sm text-[#6b7280] mb-3">
                     <span>{article.date}</span>
                     <span className="mx-2">•</span>
                     <span>{article.readTime}</span>
                   </div>
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">
+                  <h3 className="text-xl font-bold mb-2 text-[#1f2937] group-hover:text-[#4f46e5] transition-colors">
                     {article.title}
                   </h3>
-                  <p className="text-gray-400 text-sm line-clamp-2">{article.excerpt}</p>
+                  <p className="text-[#6b7280] text-sm line-clamp-2">{article.excerpt}</p>
                 </div>
               </div>
             </Link>
